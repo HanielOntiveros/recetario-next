@@ -1,17 +1,16 @@
-import client from "@/lib/client";
+import { client } from "@/lib/client";
+import Post from "@/components/Post";
 
 export default function Blog({ posts }) {
   return (
     <>
-      <main>
-        {posts.length > 0 && (
-          <ul>
-            {posts.map((post) => (
-              <li key={post._id}>{post?.title}</li>
-            ))}
-          </ul>
-        )}
-      </main>
+      <div className="flex px-12 py-24 bg-gray-200">
+        <div className="flex gap-4">
+          {posts.map((post) => (
+            <Post key={post._id} {...post} />
+          ))}
+        </div>
+      </div>
     </>
   );
 }
@@ -21,7 +20,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts
-    }
+      posts,
+    },
   };
 }
