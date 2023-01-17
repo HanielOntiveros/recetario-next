@@ -1,7 +1,7 @@
 export default {
-  name: 'recipes',
+  name: 'recipe',
   type: 'document',
-  title: 'Recipes',
+  title: 'Recipe',
   fields: [
     {
       name: 'title',
@@ -17,6 +17,17 @@ export default {
           title: 'Author',
         },
       ],
+    },
+    {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'title',
+        maxLength: 200, // will be ignored if slugify is set
+        slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+      },
     },
     {
       title: 'Image',

@@ -1,5 +1,5 @@
 import pet from './pet'
 import post from './post'
-import recipes from './recipes'
+import recipe from './recipe'
 
-export const schemaTypes = [pet, post, recipes]
+export const schemaTypes = [pet, post, recipe]
