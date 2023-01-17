@@ -19,6 +19,11 @@ export default {
       ],
     },
     {
+      name: 'time',
+      type: 'string',
+      title: 'Time',
+    },
+    {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
@@ -57,6 +62,11 @@ export default {
       name: 'description',
       type: 'text',
       title: 'Description',
+    },
+    {
+      name: 'direction',
+      type: 'text',
+      title: 'Direction',
     },
   ],
 }
