@@ -49,7 +49,7 @@ export default function index() {
             <Image src="/star.svg" width={20} height={12} alt="" />
             <h1 className="pl-2 font-bold text-white text-sml">4.6</h1>
           </div>
-          <h1 className="text-2xl font-bold text-white">Lorem, ipsum.</h1>
+          <h1 className="text-2xl font-bold text-white">Titulo de la receta</h1>
         </div>
         <div className="grid justify-center">
           <Image src="/recipe-1.webp" width={600} height={0} alt="" />
@@ -60,7 +60,9 @@ export default function index() {
             <Image src="/star.svg" width={20} height={12} alt="" />
             <h1 className="pl-2 font-bold text-white text-sml">4.6</h1>
           </div>
-          <h1 className="text-2xl font-bold text-white">Lorem, ipsum.</h1>
+          <h1 className="text-2xl font-bold text-white">
+            Titulo de la receta.
+          </h1>
         </div>
       </div>
     </>
