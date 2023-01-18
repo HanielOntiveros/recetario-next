@@ -32,7 +32,6 @@ yarn-error.log*
 .vercel
 
 # img
-*.webp
 *.jfif
 *.jpeg
 *.jpg
