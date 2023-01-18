@@ -1,11 +1,9 @@
-import React from "react";
-
+import IndexMain from "@/components/Sections/IndexMain";
 
 export default function Index() {
   return (
     <>
-      
-      <div className="bg-red-200">index</div>
+      <IndexMain />
     </>
   );
 }
