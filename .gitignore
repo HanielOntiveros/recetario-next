@@ -31,8 +31,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-# img
-*.jfif
-*.jpeg
-*.jpg
-*.png
+#env
+*.env

@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { CldImage } from 'next-cloudinary';
 
 export default function index() {
   return (
     <>
       <div className="relative flex justify-center py-12 bg-neutral-800">
         <div className="">
-          <Image src="/recipe-1.webp" width={800} height={400} alt="" />
+          <CldImage src="https://res.cloudinary.com/dy4p1m5wv/image/upload/v1674062392/recetario-next/recipe-1_zwpzxc.webp" width={800} height={400} alt="" />
         </div>
         <div className="absolute right-0 w-1/2 bg-blue-200 -bottom-8 h-44">
           <p className="text-white">
@@ -16,14 +17,14 @@ export default function index() {
       </div>
       <div className="grid grid-cols-3 gap-6 px-12 py-20 bg-neutral-800">
         <div className="grid justify-center ">
-          <Image src="/recipe-1.webp" width={400} height={0} alt="" />
+          <CldImage src="https://res.cloudinary.com/dy4p1m5wv/image/upload/v1674062392/recetario-next/recipe-1_zwpzxc.webp" width={400} height={0} alt="" />
           <h1 className="text-xl font-bold text-white">Lorem, ipsum.</h1>
           <p className="pt-2 text-2xl leading-tight text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing.
           </p>
         </div>
         <div className="grid justify-center">
-          <Image src="/recipe-1.webp" width={400} height={0} alt="" />
+        <CldImage src="https://res.cloudinary.com/dy4p1m5wv/image/upload/v1674062392/recetario-next/recipe-1_zwpzxc.webp" width={400} height={0} alt="" />
           <div>
             <h1 className="text-xl font-bold text-white">Lorem, ipsum.</h1>
             <p className="pt-2 text-2xl leading-tight text-white">
@@ -32,7 +33,7 @@ export default function index() {
           </div>
         </div>
         <div className="grid justify-center">
-          <Image src="/recipe-1.webp" width={400} height={0} alt="" />
+          <CldImage src="https://res.cloudinary.com/dy4p1m5wv/image/upload/v1674062392/recetario-next/recipe-1_zwpzxc.webp" width={400} height={0} alt="" />
           <h1 className="text-xl font-bold text-white">Lorem, ipsum.</h1>
           <p className="pt-2 text-2xl leading-tight text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing.
@@ -41,7 +42,7 @@ export default function index() {
       </div>
       <div className="grid grid-cols-2 gap-4 px-6 bg-neutral-800">
         <div className="grid justify-center">
-          <Image src="/recipe-1.webp" width={600} height={0} alt="" />
+          <CldImage src="https://res.cloudinary.com/dy4p1m5wv/image/upload/v1674062392/recetario-next/recipe-1_zwpzxc.webp" width={600} height={0} alt="" />
           <div className="flex items-center px-2 py-2">
             <Image src="/clock.svg" width={20} height={12} alt="" />
 
@@ -52,7 +53,7 @@ export default function index() {
           <h1 className="text-2xl font-bold text-white">Titulo de la receta</h1>
         </div>
         <div className="grid justify-center">
-          <Image src="/recipe-1.webp" width={600} height={0} alt="" />
+          <CldImage src="https://res.cloudinary.com/dy4p1m5wv/image/upload/v1674062392/recetario-next/recipe-1_zwpzxc.webp" width={600} height={0} alt="" />
           <div className="flex items-center px-2 py-2">
             <Image src="/clock.svg" width={20} height={12} alt="" />
 
@@ -68,3 +69,4 @@ export default function index() {
     </>
   );
 }
+
