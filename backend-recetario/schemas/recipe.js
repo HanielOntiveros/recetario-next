@@ -9,21 +9,6 @@ export default {
       title: 'Title',
     },
     {
-      type: 'array',
-      name: 'ingredients',
-      of: [
-        {
-          type: 'string',
-          title: 'Author',
-        },
-      ],
-    },
-    {
-      name: 'time',
-      type: 'string',
-      title: 'Time',
-    },
-    {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
@@ -34,6 +19,27 @@ export default {
         slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
       },
     },
+    {
+      name: 'preparationtime',
+      type: 'string',
+      title: 'Preparation Time',
+    },
+    {
+      name: 'cookingtime',
+      type: 'string',
+      title: 'Cooking Time',
+    },
+    {
+      type: 'array',
+      name: 'ingredients',
+      of: [
+        {
+          type: 'string',
+          title: 'Author',
+        },
+      ],
+    },
+
     {
       title: 'Image',
       name: 'image',
@@ -59,19 +65,20 @@ export default {
       ],
     },
     {
-      name: 'description',
-      type: 'text',
-      title: 'Description',
-    },
-    {
       name: 'place',
       type: 'string',
       title: 'Place',
     },
     {
-      name: 'preparacion',
+      name: 'description',
       type: 'text',
-      title: 'Preparacion',
+      title: 'Description',
+    },
+
+    {
+      name: 'preparation',
+      type: 'text',
+      title: 'Preparation',
     },
   ],
 }
