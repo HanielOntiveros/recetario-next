@@ -16,6 +16,9 @@ export default function index() {
         <Link href="/recipe">
           <h1 className="pr-4">Recetas</h1>
         </Link>
+        <Link href="/test">
+          <h1 className="pr-4"> Test</h1>
+        </Link>
       </div>
     </div>
   );
