@@ -68,5 +68,10 @@ export default {
       type: 'text',
       title: 'Direction',
     },
+    {
+      name: 'preparacion',
+      type: 'text',
+      title: 'Preparacion',
+    },
   ],
 }

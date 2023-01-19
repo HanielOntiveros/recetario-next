@@ -2,7 +2,7 @@ import Image from "next/image";
 import { urlFor } from "@/lib/client";
 import Link from "next/link";
 
-export default function index({ title, image, description, slug , time}) {
+export default function index({ title, image, description, slug, time }) {
   return (
     <div className="duration-300 hover:scale-105">
       <div className="max-w-sm border border-gray-200 rounded-lg shadow-md">
