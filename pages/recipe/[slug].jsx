@@ -42,7 +42,7 @@ export default function Post({ recipe }) {
           <div className="flex items-start w-4/6 py-6">
             <Image src="/fast-right-circle.svg" width={24} height={24} alt="" />
             <p className="pl-6 font-bold leading-relaxed text-white">
-              {recipe.preparacion}
+              {recipe.preparation}
             </p>
           </div>
         </div>
