@@ -64,9 +64,9 @@ export default {
       title: 'Description',
     },
     {
-      name: 'direction',
-      type: 'text',
-      title: 'Direction',
+      name: 'place',
+      type: 'string',
+      title: 'Place',
     },
     {
       name: 'preparacion',
