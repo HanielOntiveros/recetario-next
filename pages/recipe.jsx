@@ -4,10 +4,12 @@ import Recipes from "@/components/Recipes";
 export default function Recipe({ recipes }) {
   return (
     <>
-      <div className="flex gap-4">
-        {recipes.map((recipe) => (
-          <Recipes key={recipe._id} {...recipe} />
-        ))}
+      <div className="h-screen bg-neutral-800">
+        <div className="flex gap-4">
+          {recipes.map((recipe) => (
+            <Recipes key={recipe._id} {...recipe} />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -36,6 +36,20 @@ export default function Post({ recipe }) {
               ))}
             </ul>
           </div>
+          <div className="py-4">
+            <p className="text-4xl font-bold text-white">
+              Tiempo de Preparacion
+            </p>
+            <p className="pt-4 pb-2 text-xl font-bold text-white">
+              {recipe.cookingtime} Min
+            </p>
+          </div>
+          <div className="py-4">
+            <p className="text-4xl font-bold text-white">Tiempo de Coccion</p>
+            <p className="pt-4 pb-2 text-xl font-bold text-white">
+              {recipe.preparationtime} Min
+            </p>
+          </div>
         </div>
         <div className="col-span-2">
           <h5 className="text-4xl font-bold text-white">Preparacion</h5>
