@@ -74,5 +74,11 @@ export default {
       type: 'text',
       title: 'Preparation',
     },
+    {
+      name: 'imageGallery',
+      title: 'Image Gallery',
+      type: 'array',
+      of: [{type: 'image'}],
+    },
   ],
 }
