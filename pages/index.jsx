@@ -8,6 +8,7 @@ import { Navigation } from "swiper";
 import Image from "next/image";
 import { useRef } from "react";
 import { CldImage } from "next-cloudinary";
+import Link from "next/link";
 
 export default function Index({ recipes }) {
   const swiperRef = useRef();
@@ -144,8 +145,14 @@ export default function Index({ recipes }) {
               </h1>
               <Image src="/star.svg" width={20} height={12} alt="" />
               <h1 className="pl-2 font-bold text-white text-sml">4.6</h1>
+              <Link href={`/recipe/${encodeURIComponent(recipes[2].slug.current)}`}>
+            <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-white rounded-lg">
+              Read More
+            </button>
+          </Link> 
             </div>
-          </div>
+          </div> 
+            
         </div>
       </div>
     </>
@@ -153,7 +160,7 @@ export default function Index({ recipes }) {
 }
 export async function getStaticProps() {
   const recipes = await client.fetch(`*[_type == "recipe"]`);
-  console.log(recipes[0]);
+  console.log(recipes.length);
 
   return {
     props: {

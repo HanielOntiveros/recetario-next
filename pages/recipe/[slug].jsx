@@ -59,6 +59,18 @@ export default function Post({ recipe }) {
               {recipe.preparation}
             </p>
           </div>
+        <div className="col-span-2 ">
+          {recipe.imageGallery.map(img => (
+            // eslint-disable-next-line react/jsx-key
+            <Image
+            src={urlFor(img.asset._ref).url()}
+            alt=""
+            width="600"
+            height="100"
+            className=""
+          />
+          ))}
+        </div>
         </div>
       </div>
     </>
@@ -88,7 +100,6 @@ export async function getStaticProps({ params: { slug } }) {
   const query = `*[_type == "recipe" && slug.current == '${slug}'][0]`;
 
   const recipe = await client.fetch(query);
-
   return {
     props: {
       recipe,

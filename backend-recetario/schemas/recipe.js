@@ -79,6 +79,9 @@ export default {
       title: 'Image Gallery',
       type: 'array',
       of: [{type: 'image'}],
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
     },
   ],
 }
