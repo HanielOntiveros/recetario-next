@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
+import { Autoplay } from "swiper";
 import Image from "next/image";
 import { useRef } from "react";
 import { CldImage } from "next-cloudinary";
@@ -22,7 +22,11 @@ export default function Index({ recipes }) {
                 spaceBetween={0}
                 centeredSlides={true}
                 loop
-                modules={[Navigation]}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
                 onBeforeInit={(swiper) => {
                   swiperRef.current = swiper;
                 }}
@@ -60,24 +64,6 @@ export default function Index({ recipes }) {
                   />
                 </SwiperSlide>
               </Swiper>
-              <div className="flex justify-between py-2">
-                <button onClick={() => swiperRef.current?.slidePrev()}>
-                  <Image
-                    src="/nav-arrow-left.svg"
-                    width={24}
-                    height={12}
-                    alt=""
-                  />
-                </button>
-                <button onClick={() => swiperRef.current?.slideNext()}>
-                  <Image
-                    src="/nav-arrow-right.svg"
-                    width={24}
-                    height={24}
-                    alt=""
-                  />
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -85,13 +71,17 @@ export default function Index({ recipes }) {
       <div className="flex justify-center py-24 bg-neutral-800">
         <div className="grid grid-cols-3 gap-8 px-6">
           <div>
-            <Image
-              src={urlFor(recipes[0].image).url()}
-              alt="Prueba"
-              width="400"
-              height="100"
-              className=""
-            />
+            <Link
+              href={`/recipe/${encodeURIComponent(recipes[0].slug.current)}`}
+            >
+              <Image
+                src={urlFor(recipes[0].image).url()}
+                alt="Prueba"
+                width="400"
+                height="100"
+                className=""
+              />
+            </Link>
             <h1 className="py-2 text-2xl font-bold text-white">
               {recipes[0].title}
             </h1>
@@ -106,13 +96,17 @@ export default function Index({ recipes }) {
             </div>
           </div>
           <div>
-            <Image
-              src={urlFor(recipes[1].image).url()}
-              alt="Prueba"
-              width="400"
-              height="100"
-              className=""
-            />
+            <Link
+              href={`/recipe/${encodeURIComponent(recipes[1].slug.current)}`}
+            >
+              <Image
+                src={urlFor(recipes[1].image).url()}
+                alt="Prueba"
+                width="400"
+                height="100"
+                className=""
+              />
+            </Link>
             <h1 className="py-2 text-2xl font-bold text-white">
               {recipes[1].title}
             </h1>
@@ -127,13 +121,18 @@ export default function Index({ recipes }) {
             </div>
           </div>
           <div>
-            <Image
-              src={urlFor(recipes[2].image).url()}
-              alt="Prueba"
-              width="400"
-              height="100"
-              className=""
-            />
+            <Link
+              href={`/recipe/${encodeURIComponent(recipes[2].slug.current)}`}
+            >
+              <Image
+                src={urlFor(recipes[2].image).url()}
+                alt="Prueba"
+                width="400"
+                height="100"
+                className=""
+              />
+            </Link>
+
             <h1 className="py-2 text-2xl font-bold text-white">
               {recipes[2].title}
             </h1>
@@ -145,14 +144,8 @@ export default function Index({ recipes }) {
               </h1>
               <Image src="/star.svg" width={20} height={12} alt="" />
               <h1 className="pl-2 font-bold text-white text-sml">4.6</h1>
-              <Link href={`/recipe/${encodeURIComponent(recipes[2].slug.current)}`}>
-            <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-white rounded-lg">
-              Read More
-            </button>
-          </Link> 
             </div>
-          </div> 
-            
+          </div>
         </div>
       </div>
     </>
