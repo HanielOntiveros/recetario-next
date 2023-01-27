@@ -18,59 +18,58 @@ export default function Post({ recipe }) {
         />
       </div>
       <div className="px-12 py-12 bg-neutral-800">
-        <p className="text-6xl font-bold text-white">{recipe.title}</p>
-        <p className="pt-4 text-2xl font-light text-white">
+        <p className="text-4xl font-bold text-white">{recipe.title}</p>
+        <p className="pt-4 text-xl font-light text-white">
           {recipe.description}
         </p>
       </div>
       <div className="grid grid-cols-3 py-12 bg-neutral-800">
         <div className="px-12">
-          <h5 className="text-4xl font-bold text-white">Ingredientes</h5>
+          <h5 className="text-2xl font-bold text-white">Ingredientes</h5>
           <div className="flex py-6">
             <ul>
               {recipe.ingredients.map((ingredient) => (
                 // eslint-disable-next-line react/jsx-key
-                <li className="pb-2 text-xl font-bold text-white">
+                <li className="pb-2 text-lg font-bold text-white">
                   {ingredient}
                 </li>
               ))}
             </ul>
           </div>
           <div className="py-4">
-            <p className="text-4xl font-bold text-white">
+            <p className="text-2xl font-bold text-white">
               Tiempo de Preparacion
             </p>
-            <p className="pt-4 pb-2 text-xl font-bold text-white">
+            <p className="pt-4 pb-2 text-lg font-bold text-white">
               {recipe.cookingtime} Min
             </p>
           </div>
           <div className="py-4">
-            <p className="text-4xl font-bold text-white">Tiempo de Coccion</p>
-            <p className="pt-4 pb-2 text-xl font-bold text-white">
+            <p className="text-2xl font-bold text-white">Tiempo de Coccion</p>
+            <p className="pt-4 pb-2 text-lg font-bold text-white">
               {recipe.preparationtime} Min
             </p>
           </div>
         </div>
         <div className="col-span-2">
-          <h5 className="text-4xl font-bold text-white">Preparacion</h5>
+          <h5 className="text-2xl font-bold text-white">Preparacion</h5>
           <div className="flex items-start w-4/6 py-6">
-            <Image src="/fast-right-circle.svg" width={24} height={24} alt="" />
-            <p className="pl-6 font-bold leading-relaxed text-white">
+            <p className="font-bold leading-relaxed text-white">
               {recipe.preparation}
             </p>
           </div>
-        <div className="col-span-2 ">
-          {recipe.imageGallery.map(img => (
-            // eslint-disable-next-line react/jsx-key
-            <Image
-            src={urlFor(img.asset._ref).url()}
-            alt=""
-            width="600"
-            height="100"
-            className=""
-          />
-          ))}
-        </div>
+          <div className="grid w-4/6 grid-cols-2 gap-4 px-6 py-6">
+            {recipe.imageGallery.map((img) => (
+              // eslint-disable-next-line react/jsx-key
+              <Image
+                src={urlFor(img.asset._ref).url()}
+                alt=""
+                width="600"
+                height="100"
+                className=""
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>
