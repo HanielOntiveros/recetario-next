@@ -2,9 +2,25 @@ import Head from "next/head";
 import { urlFor } from "../../lib/client";
 import { client } from "../../lib/client";
 import Image from "next/image";
-import recipe from "@/backend-recetario/schemas/recipe";
+import { PortableText } from "@portabletext/react";
 
 export default function Post({ recipe }) {
+  const ptComponents = {
+    types: {
+      image: ({ value }) => {
+        if (!value?.asset?._ref) {
+          return null;
+        }
+        return (
+          <img
+            alt={value.alt || " "}
+            loading="lazy"
+            src={urlFor(value).width(320).height(240).fit("max").auto("format")}
+          />
+        );
+      },
+    },
+  };
   return (
     <>
       <Head></Head>
@@ -70,6 +86,7 @@ export default function Post({ recipe }) {
               />
             ))}
           </div>
+          <PortableText value={recipe.body} components={ptComponents} />
         </div>
       </div>
     </>

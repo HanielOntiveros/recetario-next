@@ -83,5 +83,10 @@ export default {
         hotspot: true, // <-- Defaults to false
       },
     },
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    },
   ],
 }
